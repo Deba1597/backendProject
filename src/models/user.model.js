@@ -25,7 +25,7 @@ const userSchema = new Schema(
             trim:true,
             index:true
         },
-        avtar:{
+        avatar:{
             type:String,///cloudinary url
             required:true
         },
@@ -85,4 +85,5 @@ userSchema.methods.generateRefreshToken = function(){
         }
     )
 }
+
 export const User = mongoose.model("User",userSchema)
